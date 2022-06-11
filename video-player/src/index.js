@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Video } from './Video';
 import { Menu } from './Menu';
+import './styles.css'
 
 const VIDEOS = {
   fast: 'https://content.codecademy.com/courses/React/react_video-fast.mp4',
@@ -17,8 +18,10 @@ class App extends React.Component {
     this.chooseVideo = this.chooseVideo.bind(this);
   }
 
-  chooseVideo(newVideo){
-    this.setState = {src: VIDEOS.newVideo}
+  chooseVideo(newVideo) {
+    this.setState({
+      src: VIDEOS[newVideo]
+    });
   }
   
   render() {
